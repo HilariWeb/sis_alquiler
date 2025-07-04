@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Inquilinos;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Livewire\Propiedads;
@@ -22,6 +23,10 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/propiedades', Propiedads::class)
     ->name('propiedades')
+    ->middleware(['auth']);
+
+    Route::get('/inquilinos', Inquilinos::class)
+    ->name('inquilinos')
     ->middleware(['auth']);
 
 require __DIR__.'/auth.php';

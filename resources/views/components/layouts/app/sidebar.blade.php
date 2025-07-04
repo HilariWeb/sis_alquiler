@@ -17,6 +17,9 @@
                     <flux:navlist.item icon="home" :href="route('propiedades')" :current="request()->routeIs('dashboard')" wire:navigate>
                         Propiedades
                     </flux:navlist.item>
+                     <flux:navlist.item icon="home" :href="route('inquilinos')" :current="request()->routeIs('dashboard')" wire:navigate>
+                        Inquilinos
+                    </flux:navlist.item>
                     
                 </flux:navlist.group>
             </flux:navlist>
